@@ -1,0 +1,122 @@
+// author - https://codepen.io/markknol/pen/eYmNWEb | https://interactive-fretboard.com (see "scales" page)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+$red: #f00;
+$scale: 1.5;
+$keyHeight: 190px * $scale;
+$keyWidth: 40px * $scale;
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    line-height: 18px;
+    background: #ddd;
+}
+
+.piano {
+    display: inline-block;
+    width: 420px;
+    text-align: left;
+    border-top: 4px solid rgba(0, 0, 0, .8);
+    border-left: 2px solid rgba(255, 255, 255, .3);
+    border-right: 2px solid rgba(255, 255, 255, .3);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+.piano-note {
+    position: relative;
+    background: #f9f9f9;
+    display: inline-block;
+    height: $keyHeight;
+    width: $keyWidth;
+    box-shadow: -1px 0 0 rgba(0, 0, 0, 0.2) inset, 0px 0 4px #ccc inset;
+    cursor: pointer;
+
+    &:active {
+        background: #eee;
+        height: $keyHeight - 1px;
+    }
+
+    .note-label:not(:empty) {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-shadow: none;
+        position: absolute;
+        top: calc(100% - 2.2em);
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.active .note-label {
+        background: change-color($red, $alpha: 0.75);
+    }
+}
+
+.piano-note:nth-child(12n + 2),
+.piano-note:nth-child(12n + 4),
+.piano-note:nth-child(12n + 7),
+.piano-note:nth-child(12n + 9),
+.piano-note:nth-child(12n + 11) {
+    background: #000;
+    height: $keyHeight * 0.6;
+    width: $keyWidth * 0.6;
+    position: absolute;
+    margin-left: -($keyWidth * 0.38);
+    box-shadow: -3px -12px 3px rgba(255, 255, 255, 0.25) inset, 1px 0 4px #555 inset;
+    border-left: 2px solid #111;
+    border-right: 2px solid #111;
+    border-bottom: 2px solid #111;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 1;
+
+    &:active {
+        background: #222;
+        box-shadow: -3px -8px 3px rgba(255, 255, 255, 0.25) inset, 1px 0 4px #555 inset;
+
+        .note-label {
+            margin-top: -2px;
+        }
+    }
+}
+
+.note-label {
+    font-family: inherit;
+    user-select: none;
+    font-size: 13px;
+    position: absolute;
+    display: inline-block;
+    padding: 3.5px 0;
+    border-radius: 17px;
+    text-shadow: 1px 1px 2px rgba(255, 246, 217, .5);
+    left: -28px;
+    top: 3px;
+    border: 0;
+    background: transparent;
+    min-width: 2em;
+    text-align: center;
+
+    &:empty {
+        display: none;
+    }
+
+    &:active {
+        border: 0;
+        outline: 0;
+        opacity: 0.8;
+        box-shadow: 0 0 14px rgba(0, 0, 0, 1);
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+a {
+    color: rgb(128, 128, 128);
+    background: linear-gradient(to right, rgba(57, 72, 255, 1), rgba(57, 213, 255, 1));
+    background-position: bottom;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
