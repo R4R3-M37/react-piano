@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-piano/static/css/main.ea0803f4.css",
+    "main.js": "/react-piano/static/js/main.14b6ce0d.js",
+    "static/media/notes_8.mp3": "/react-piano/static/media/notes_8.da73d1f9025cb535d2f0.mp3",
+    "static/media/notes_12.mp3": "/react-piano/static/media/notes_12.9b8eb072a50baeeb451b.mp3",
+    "static/media/notes_1.mp3": "/react-piano/static/media/notes_1.dc7833bdd69c5f732224.mp3",
+    "static/media/notes_4.mp3": "/react-piano/static/media/notes_4.9872113a5748c553be7d.mp3",
+    "static/media/notes_5.mp3": "/react-piano/static/media/notes_5.a664f87c8d21db512ea7.mp3",
+    "static/media/notes_6.mp3": "/react-piano/static/media/notes_6.b262197d66fde8060e0c.mp3",
+    "static/media/notes_10.mp3": "/react-piano/static/media/notes_10.dbee87b32dfc76db299d.mp3",
+    "static/media/notes_7.mp3": "/react-piano/static/media/notes_7.ffd5f938700d2caa8fb9.mp3",
+    "static/media/notes_11.mp3": "/react-piano/static/media/notes_11.7bc7e3f79873d2c9329b.mp3",
+    "static/media/notes_9.mp3": "/react-piano/static/media/notes_9.8d27aef04751ec4d8c69.mp3",
+    "static/media/notes_3.mp3": "/react-piano/static/media/notes_3.61f77c34946a760314c8.mp3",
+    "static/media/notes_2.mp3": "/react-piano/static/media/notes_2.4f48da4575bc7a3492d2.mp3",
+    "index.html": "/react-piano/index.html",
+    "main.ea0803f4.css.map": "/react-piano/static/css/main.ea0803f4.css.map",
+    "main.14b6ce0d.js.map": "/react-piano/static/js/main.14b6ce0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea0803f4.css",
+    "static/js/main.14b6ce0d.js"
+  ]
+}
